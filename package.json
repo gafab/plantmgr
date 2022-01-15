@@ -1,0 +1,24 @@
+{
+  "name": "plantmgr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env PORT=3000 DB_USER=root DB_PWD=root nodemon index.js",
+    "db": "cross-env DB_USER=root DB_PWD=root node ./src/db/init.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^12.0.3",
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3",
+    "pg": "^8.7.1",
+    "sequelize": "^6.13.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  }
+}

@@ -1,0 +1,1077 @@
+{
+	"info": {
+		"_postman_id": "6fbc0f5e-94ef-4498-aec3-f0a6420f8f84",
+		"name": "PlantManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Taxonomy",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/taxonomy",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"taxonomy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/taxonomy/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"taxonomy",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "genus",
+									"value": "Ocimum",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "basilicum",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Basil",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Albahaca",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/taxonomy/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"taxonomy",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "genus",
+									"value": "Eruca",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "vesicaria",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Arugula",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Rúcula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/taxonomy/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"taxonomy",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "genus",
+									"value": "Ocimum",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "vesicaria",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Arugula",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Rúcula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/taxonomy/delete/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"taxonomy",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plant",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/plant",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"plant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/plant/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"plant",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "taxonomyId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Basil bought at the \"feria\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/plant/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"plant",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "taxonomyId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "First generation of Arugula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/plant/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"plant",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "genus",
+									"value": "Ocimum",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "vesicaria",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Arugula",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Rúcula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/plant/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"plant",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "History",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/history",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/history/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByPlantId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/history/plant/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history",
+								"plant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "date",
+									"value": "2021-04-02",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Harvest of leaves",
+									"type": "text"
+								},
+								{
+									"key": "plantId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "harvestId",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/history/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "date",
+									"value": "2021-03-25",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Harvest of leaves",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "plantId",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "harvestId",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/history/update/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history",
+								"update",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "genus",
+									"value": "Ocimum",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "vesicaria",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Arugula",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Rúcula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/history/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Harvest",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/harvest",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/harvest/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByPlantId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/harvest/findByPlantId/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest",
+								"findByPlantId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "harvestTypeId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/harvest/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "genus",
+									"value": "Eruca",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "vesicaria",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Arugula",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Rúcula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/harvest/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "genus",
+									"value": "Ocimum",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "vesicaria",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Arugula",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Rúcula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/harvest/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HarvestType",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/harvesttype",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvesttype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/harvesttype/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvesttype",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "type",
+									"value": "leaves",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/harvesttype/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvesttype",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "genus",
+									"value": "Eruca",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "vesicaria",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Arugula",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Rúcula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/harvesttype/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvesttype",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "genus",
+									"value": "Ocimum",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "vesicaria",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Arugula",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Rúcula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/harvesttype/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvesttype",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Harvest Copy 2",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/harvest",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/harvest/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByPlantId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/harvest/findByPlantId/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest",
+								"findByPlantId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "date",
+									"value": "2021-04-02",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Harvest of seed pods",
+									"type": "text"
+								},
+								{
+									"key": "plantId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "harvestId",
+									"value": "null",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/harvest/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "genus",
+									"value": "Eruca",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "vesicaria",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Arugula",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Rúcula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/harvest/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "genus",
+									"value": "Ocimum",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "vesicaria",
+									"type": "text"
+								},
+								{
+									"key": "commonName",
+									"value": "Arugula",
+									"type": "text"
+								},
+								{
+									"key": "commonNameAlt",
+									"value": "Rúcula",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/harvest/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"harvest",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:3000"
+		}
+	]
+}
