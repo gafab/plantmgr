@@ -69,7 +69,7 @@ exports.update = async (req, res) => {
             if(ixGenusSpeciesExists){
                 res.status(412).send({"message":"Another taxonomy with both genus and species already exists"});
             }else{
-                const tax = await Taxonomy.update(  
+                await Taxonomy.update(  
                     {
                         genus: req.body.genus,
                         species: req.body.species,

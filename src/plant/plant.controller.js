@@ -50,7 +50,7 @@ exports.update = async (req, res) => {
         if(plant){
             const taxExists = await Taxonomy.findOne({where:{id: req.body.taxonomyId}});
             if(taxExists){
-                const plant = await Plant.update(  
+                await Plant.update(  
                     {
                         taxonomyId:req.body.taxonomyId,
                         description: req.body.description,
